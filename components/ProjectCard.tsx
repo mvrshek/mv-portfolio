@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 type ProjectCardProps = {
-  number: string;
-  title: string;
-  category: string;
-  description: string;
-  image: string;
-  slug: string;
+  number?: string;
+  title?: string;
+  category?: string;
+  description?: string;
+  image?: string;
+  slug?: string;
 };
 
 export default function ProjectCard({
