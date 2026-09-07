@@ -19,7 +19,7 @@ export default function PhotoSection() {
 
           <div className="relative aspect-square overflow-hidden rounded-xl">
             <Image
-              src="/photos/photo1.jpg"
+              src="/photos/photo1.JPG"
               alt="Mason"
               width={800}
               height={600}
@@ -39,7 +39,7 @@ export default function PhotoSection() {
 
           <div className="relative aspect-square overflow-hidden rounded-xl">
             <Image
-              src="/photos/photo3.jpeg"
+              src="/photos/photo3.JPEG"
               alt="Mason"
               width={800}
               height={600}

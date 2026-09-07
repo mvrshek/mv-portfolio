@@ -20,7 +20,7 @@ const projects = {
     title: "SnowBot",
     category: "Robotics",
     subtitle: "Autonomous Snow Removal Robot",
-    heroImage: "/snowbot/snowbotcadpic.jpg",
+    heroImage: "/snowbot/snowbotcadpic.JPG",
 
     overview:
       "SnowBot is an autonomous snow removal robot designed to navigate and clear snow without requiring direct human control.",
