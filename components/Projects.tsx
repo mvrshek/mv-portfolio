@@ -50,7 +50,7 @@ export default function Projects() {
           title="HueTac"
           category="Robotics · Tactile Sensing · Mechanical Design"
           description="A vision-based tactile sensor that estimates applied force by analyzing color changes in a deformable sensing medium."
-          slug = "huetac"
+          slug = "HueTac"
         />
 
       </div>
