@@ -45,6 +45,15 @@ export default function Projects() {
          //image="/VIP/hero.jpg"
           slug = "windracers"
         />
+        <ProjectCard
+          
+          title="HueTac"
+          category="Robotics · Tactile Sensing · Mechanical Design"
+          description="A vision-based tactile sensor that estimates applied force by analyzing color changes in a deformable sensing medium."
+         // image="/huetac/hero.jpg"
+          slug = "snowbot"
+        />
+
       </div>
     </section>
   );
