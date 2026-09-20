@@ -174,7 +174,7 @@ const projects = {
       "CAD",
     ],
 
-     as ProjectSection[],
+    
   },
 };
 
