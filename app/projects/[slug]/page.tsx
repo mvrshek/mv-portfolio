@@ -152,6 +152,30 @@ const projects = {
       },
     ] as ProjectSection[],
   },
+  
+  HueTac: {
+    title: "HueTac",
+    category: "Robotics",
+    subtitle: "Vision based tactile sensing through color change",
+    heroImage: "/HueTac/HueTacCad.PNG",
+
+    overview:
+      "SnowBot is an autonomous snow removal robot designed to navigate and clear snow without requiring direct human control.",
+
+    role:
+      "I work across the mechanical, electrical, and software systems, including the embedded hardware stack, sensors, motor controllers, and autonomous control architecture.",
+
+    technologies: [
+      "ESP32",
+      "C++",
+      "BNO085 IMU",
+      "Motor Controllers",
+      "Embedded Systems",
+      "CAD",
+    ],
+
+     as ProjectSection[],
+  },
 };
 
 export default async function ProjectPage({
