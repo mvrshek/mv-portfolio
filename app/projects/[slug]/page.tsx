@@ -169,7 +169,7 @@ const projects: Record<string, Project> = {
     title: "HueTac",
     category: "Robotics",
     subtitle: "Vision based tactile sensing through color change",
-    heroImage: "/HueTac/HueTacCad.PNG",
+    heroImage: "/HueTac/HueTacCad.png",
 
     overview:
       "HueTac is a vision-based tactile sensing system that estimates applied force by measuring color changes within a deformable sensing material.",
