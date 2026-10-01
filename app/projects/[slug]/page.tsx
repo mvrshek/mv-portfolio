@@ -21,6 +21,7 @@ type Project = {
   category: string;
   subtitle: string;
   heroImage: string;
+  heroImages?: string[];
   overview: string;
   role: string;
   technologies: string[];
@@ -170,7 +171,12 @@ const projects: Record<string, Project> = {
     category: "Robotics",
     subtitle: "Vision based tactile sensing through color change",
     heroImage: "/HueTac/HueTacCad.png",
-
+    
+    heroImages: [
+    "/HueTac/HueTacCad.png",
+    "/HueTac/gripperCadPic.png",
+    "/HueTac/photo3.png",
+  ],
     overview:
       "HueTac is a vision-based tactile sensing system that estimates applied force by measuring color changes within a deformable sensing material.",
 
@@ -234,16 +240,37 @@ export default async function ProjectPage({
             {project.subtitle}
           </p>
 
-          {/* Hero Image */}
-          <div className="relative mt-16 aspect-[16/9] overflow-hidden rounded-2xl">
-            <Image
-              src={project.heroImage}
-              alt={project.title}
-              fill
-              className="object-contain"
-            />
-          </div>
+          
+          {/* Hero Images */}
 
+{project.heroImages?.length ? (
+  <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+    {project.heroImages.map((src, index) => (
+      <div
+        key={src}
+        className="relative aspect-square overflow-hidden rounded-2xl bg-neutral-900"
+      >
+        <Image
+          src={src}
+          alt={`${project.title} — view ${index + 1}`}
+          fill
+          sizes="(min-width: 768px) 33vw, 100vw"
+          className="object-contain p-4"
+        />
+      </div>
+    ))}
+  </div>
+) : (
+  <div className="relative mt-16 aspect-[16/9] overflow-hidden rounded-2xl">
+    <Image
+      src={project.heroImage}
+      alt={project.title}
+      fill
+      sizes="100vw"
+      className="object-contain"
+    />
+  </div>
+)}
           {/* Overview */}
           <div className="mt-16 grid gap-12 md:grid-cols-[1fr_2fr]">
             <div>
