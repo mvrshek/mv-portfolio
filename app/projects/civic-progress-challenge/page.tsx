@@ -14,18 +14,18 @@ export default function CivicProgressChallengePage() {
           </Link>
 
           <p className="mt-16 text-sm uppercase tracking-[0.3em] text-gray-500">
-            Civic Progress
+            Civic Progress Challenge: SAE 
           </p>
           <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-7xl">
             Civic progress challenge
           </h1>
           <p className="mt-4 text-xl text-gray-400 md:text-2xl">
-            Project overview and highlights
+            GM Sponsored Accesibility project. Bringing universal design to the automotive industry
           </p>
 
           <div className="mt-16">
             <CivicProjectImage
-              src="/civic-progress-challenge/hero.jpg"
+              src="/civic-progress-challenge/hero.png"
               alt="Civic progress challenge wide project image"
               sizes="(min-width: 1536px) 1280px, 100vw"
             />
@@ -37,8 +37,7 @@ export default function CivicProgressChallengePage() {
             </p>
             {/* Replace this paragraph with your project overview. */}
             <p className="text-xl leading-relaxed text-gray-300">
-              Add an introduction to the Civic progress challenge here. Describe
-              the challenge, the project goals, and your involvement.
+              The Civic Progress Challenge is a GM & SAE sponsored design challenge spanning 2 years, centered around developing accesible design for GM vehicles. As a member of Purdues team for the challenge, I serve as a digital twin subteam lead, where I am actively developing a one to one digital model for our design changes, so that we can simulate work prior to implementation. Additioanlly, the digital twin is being used to validate new features through lived experience research, as the model is currently being assessed by a group of disabled individuals in our community, so they can help us improve our design before we make physical changes.
             </p>
           </div>
         </div>
