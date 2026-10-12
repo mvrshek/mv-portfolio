@@ -56,7 +56,7 @@ export default function Projects() {
         <ProjectCard
           title="Civic progress challenge"
           category="Civic Progress"
-          description="Project overview and highlights coming soon."
+          description="GM sponsored accessibility integration challenge with autonomous vehicles. Digital twin subteam lead, developing a one to one digital model for preliminary design."
           slug="civic-progress-challenge"
         />
 

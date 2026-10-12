@@ -46,7 +46,7 @@ export default function CivicProgressChallengePage() {
       <section className="px-8 pb-32 md:px-16 lg:px-24">
         <div className="mx-auto grid max-w-7xl gap-12 border-t border-white/10 pt-16 md:grid-cols-2 md:items-center">
           <CivicProjectImage
-            src="/civic-progress-challenge/detail.jpg"
+            src="/civic-progress-challenge/detail.png"
             alt="Civic progress challenge project detail"
             sizes="(min-width: 1536px) 616px, (min-width: 768px) 50vw, 100vw"
           />
