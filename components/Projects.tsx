@@ -53,6 +53,13 @@ export default function Projects() {
           slug = "HueTac"
         />
 
+        <ProjectCard
+          title="Civic progress challenge"
+          category="Civic Progress"
+          description="Project overview and highlights coming soon."
+          slug="civic-progress-challenge"
+        />
+
       </div>
     </section>
   );
