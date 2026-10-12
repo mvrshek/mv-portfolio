@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">ResNet-18 and GRU classifier</title>
+  <desc id="desc">Conceptual pipeline from sensor image frames through ResNet-18 feature extraction and GRU sequence modeling to classification.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#a3a3a3"/></marker>
+  </defs>
+  <rect width="1280" height="720" rx="32" fill="#171717"/>
+  <g font-family="Arial, sans-serif">
+    <text x="80" y="110" fill="#a3a3a3" font-size="22" letter-spacing="4">MVP-TAC / CLASSIFIER DEVELOPMENT</text>
+    <text x="80" y="175" fill="#fafafa" font-size="44" font-weight="700">ResNet-18 + GRU</text>
+    <g fill="#262626" stroke="#525252" stroke-width="2">
+      <rect x="70" y="285" width="230" height="180" rx="20"/>
+      <rect x="375" y="285" width="230" height="180" rx="20"/>
+      <rect x="680" y="285" width="230" height="180" rx="20"/>
+      <rect x="985" y="285" width="230" height="180" rx="20"/>
+    </g>
+    <g stroke="#a3a3a3" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M315 375 H355"/><path d="M620 375 H660"/><path d="M925 375 H965"/>
+    </g>
+    <g text-anchor="middle" fill="#fafafa" font-size="28" font-weight="700">
+      <text x="185" y="360">Image frames</text><text x="490" y="360">ResNet-18</text><text x="795" y="360">GRU</text><text x="1100" y="360">Classifier</text>
+    </g>
+    <g text-anchor="middle" fill="#a3a3a3" font-size="20">
+      <text x="185" y="405">Sensor sequence</text><text x="490" y="405">Frame features</text><text x="795" y="405">Temporal features</text><text x="1100" y="405">Class prediction</text>
+    </g>
+    <text x="80" y="590" fill="#a3a3a3" font-size="22">Conceptual architecture</text>
+  </g>
+</svg>

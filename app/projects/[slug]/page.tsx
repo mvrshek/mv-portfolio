@@ -113,6 +113,13 @@ const projects: Record<string, Project> = {
       },
 
       {
+        title: "ResNet-18 + GRU Classifier",
+        text: "I contributed to implementing and training MVP-Tacs deep learning model for classifying tumor phantom hardness from tactile video. Built in Python using PyTorch, the model combines a ResNet-18 image encoder, which extracts features from the sensor’s photoelastic patterns, with a gated recurrent unit (GRU) that tracks how those patterns change during contact. By processing 16-frame palpation sequences, the model captures both spatial features and their evolution over time. Our approach achieved 97.4% classification accuracy on exposed tumor phantoms and 92.1% on subdermal tumor phantoms, demonstrating the potential of learned tactile perception for robot-assisted surgical palpation.",
+        image: "/mvptac/resnet18-gru.svg",
+        caption: "Conceptual classifier pipeline: image frames, ResNet-18 features, GRU sequence modeling, and classification.",
+      },
+
+      {
         title: "Testing & Results",
         text: "The testing setup, and in depth results profile is detailed in the 2026 IROS accepted publication: MVP-Tac: A Miniaturized Dual-Modal Vision and Photoelastic Tactile Sensor for Robot-Assisted Minimally Invasive Surgery, of which I was named a co-author due to heavy contributions to the project.",
         link: "https://arxiv.org/abs/2607.18660",
