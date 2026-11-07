@@ -11,7 +11,7 @@ type ProjectSection = {
   title: string;
   text: string;
   image?: string | string[];
-  imagePlaceholder?: string;
+  imagePlaceholder?: string | string[];
   caption?: string;
   link?: string;
   linkText?: string;
@@ -52,8 +52,8 @@ const projects: Record<string, Project> = {
       {
         title: "Physical Assembly",
         text: "The physical assembly brings the CAD design into a real teleoperation setup, connecting the gripper and end effector for manipulation demonstrations and future policy training.",
-        // Replace imagePlaceholder with image: "/robotic-gripper-assembly/assembly.jpg".
-        imagePlaceholder: "Real assembly photo",
+        // Replace imagePlaceholder with 
+        image: "/robotic-gripper-assembly/assembly.jpg"
       },
     ],
   },
@@ -95,9 +95,10 @@ const projects: Record<string, Project> = {
 
       {
         title: "Finite Element Analysis (FEA)",
-        text: "Here is a preliminary round of FEA testing done in ansys with a 150 N distributed load (to simulate packed snow. Based on motor torque calculations.) appleid across the plowing interface. In future simulations we will test bolts, and more of the actual plow architecture, this first round was just to validate the traignular plow footprint..",
-        // Replace imagePlaceholder with image: "/snowbot/fea.png" after adding the picture to public/snowbot/fea.png.
-        imagePlaceholder: "SnowBot FEA image",
+        text: "Here is a preliminary round of FEA testing done in ansys with a 150 N distributed load (to simulate packed snow. Based on motor torque calculations.) applied across the plowing interface. In future simulations we will test bolts, and more of the actual plow architecture, this first round was just to validate the traignular plow footprint. As shown, the max deformation is .032 in, and it occurs at the same spot as the max stress: the top vertex of the triangular plow (we are working on strengthening this part of the plow).",
+        // Replace imagePlaceholder with image: ["/snowbot/deformation.png", "/snowbot/von-mises-stress.png"] after adding both pictures.
+        image: ["/snowbot/deformation.png", "/snowbot/von-mises-stress.png"]
+        
       },
 
       {
@@ -425,11 +426,16 @@ export default async function ProjectPage({
                       }
                     >
                       <div className="flex flex-col gap-6">
-                        {section.imagePlaceholder && (
+                        {(section.imagePlaceholder
+                          ? Array.isArray(section.imagePlaceholder)
+                            ? section.imagePlaceholder
+                            : [section.imagePlaceholder]
+                          : []
+                        ).map((placeholder) => (
                           <div className="flex aspect-[16/9] items-center justify-center rounded-2xl border border-dashed border-white/20 bg-neutral-900 p-8 text-center text-gray-500">
-                            {section.imagePlaceholder}
+                            {placeholder}
                           </div>
-                        )}
+                        ))}
                         {images.map((image, imageIndex) => (
                           <div
                             key={image}
