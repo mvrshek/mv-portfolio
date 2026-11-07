@@ -88,9 +88,16 @@ const projects: Record<string, Project> = {
 
       {
         title: "Current State",
-        text: "The current SnowBot model represents the latest iteration of the system and reflects the design decisions made throughout the prototyping process. To prepare for further analysis, the model will have fasteners added, and then FEA will be run. The model is still a prototype and is not fully fleshed out yet.",
+        text: "The current SnowBot model represents the latest iteration of the system and reflects the design decisions made throughout the prototyping process. To prepare for further analysis, the model will have fasteners added, and then we will conduct FEA simulations to validate the design. The model is still a prototype and is not fully fleshed out yet.",
         link: "/snowbot/snowbot-model.EASM",
         linkText: "View CAD Model",
+      },
+
+      {
+        title: "Finite Element Analysis (FEA)",
+        text: "Here is a preliminary round of FEA testing done in ansys with a 150 N distributed load (to simulate packed snow. Based on motor torque calculations.) appleid across the plowing interface. In future simulations we will test bolts, and more of the actual plow architecture, this first round was just to validate the traignular plow footprint..",
+        // Replace imagePlaceholder with image: "/snowbot/fea.png" after adding the picture to public/snowbot/fea.png.
+        imagePlaceholder: "SnowBot FEA image",
       },
 
       {
