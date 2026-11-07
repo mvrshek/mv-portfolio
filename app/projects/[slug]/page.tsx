@@ -31,6 +31,7 @@ type Project = {
 };
 
 const projects: Record<string, Project> = {
+  /* Temporarily hidden: Robotic Gripper Assembly
   "robotic-gripper-assembly": {
     title: "Robotic Gripper Assembly",
     category: "Robotics · Policy Training · Tactile Sensing",
@@ -57,6 +58,7 @@ const projects: Record<string, Project> = {
       },
     ],
   },
+  */
   snowbot: {
     title: "SnowBot",
     category: "Robotics",

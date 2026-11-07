@@ -37,12 +37,14 @@ export default function Projects() {
           slug = "snowbot"
         />
 
+        {/* Temporarily hidden: Robotic Gripper Assembly
         <ProjectCard
           title="Robotic Gripper Assembly"
           category="Robotics · Policy Training · Tactile Sensing"
           description="A robotic gripper assembly for teleoperation and policy training, designed to support the collection of manipulation demonstrations and integrate tactile sensing for contact feedback."
           slug="robotic-gripper-assembly"
         />
+        */}
 
         <ProjectCard
           
