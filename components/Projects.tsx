@@ -21,6 +21,15 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <ProjectCard
           
+          title="MVP-Tac"
+          category="Tactile Sensing · Computer Vision · Robotic Surgery"
+          description="Developed a miniaturized tactile sensing system combining optical hardware, rapid prototyping, synchronized image-force data collection, and machine learning for force estimation."
+         //image="/mvptac/hero.png"
+          slug = "mvp-tac"
+        />
+
+        <ProjectCard
+          
           title="Snowbot"
           category="Robotics · Embedded Systems · Mechanical Design"
           description="Designed and built an autonomous snow-plowing robot integrating a custom mechanical platform, ESP32-based embedded control system, IMU sensing, motor control, and autonomous navigation."
@@ -33,15 +42,6 @@ export default function Projects() {
           category="Robotics · Policy Training · Tactile Sensing"
           description="A robotic gripper assembly for teleoperation and policy training, designed to support the collection of manipulation demonstrations and integrate tactile sensing for contact feedback."
           slug="robotic-gripper-assembly"
-        />
-
-        <ProjectCard
-          
-          title="MVP-Tac"
-          category="Tactile Sensing · Computer Vision · Robotic Surgery"
-          description="Developed a miniaturized tactile sensing system combining optical hardware, rapid prototyping, synchronized image-force data collection, and machine learning for force estimation."
-         //image="/mvptac/hero.png"
-          slug = "mvp-tac"
         />
 
         <ProjectCard

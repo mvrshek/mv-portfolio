@@ -53,7 +53,7 @@ const projects: Record<string, Project> = {
         title: "Physical Assembly",
         text: "The physical assembly brings the CAD design into a real teleoperation setup, connecting the gripper and end effector for manipulation demonstrations and future policy training.",
         // Replace imagePlaceholder with 
-        image: "/robotic-gripper-assembly/assembly.jpg"
+        image: "/robotic-gripper-assembly/assembly.JPEG"
       },
     ],
   },
