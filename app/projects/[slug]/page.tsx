@@ -11,6 +11,7 @@ type ProjectSection = {
   title: string;
   text: string;
   image?: string | string[];
+  imagePlaceholder?: string;
   caption?: string;
   link?: string;
   linkText?: string;
@@ -20,7 +21,8 @@ type Project = {
   title: string;
   category: string;
   subtitle: string;
-  heroImage: string;
+  heroImage?: string;
+  heroPlaceholder?: string;
   heroImages?: string[];
   overview: string;
   role: string;
@@ -29,6 +31,32 @@ type Project = {
 };
 
 const projects: Record<string, Project> = {
+  "robotic-gripper-assembly": {
+    title: "Robotic Gripper Assembly",
+    category: "Robotics · Policy Training · Tactile Sensing",
+    subtitle: "Robotic Teleoperation for Policy Training",
+    // Replace the placeholder with heroImage: "/robotic-gripper-assembly/cad.jpg".
+    heroPlaceholder: "CAD design image",
+    overview:
+      "A robotic gripper assembly for robotic teleoperation and policy training. The project brings together mechanical design and tactile sensing to support manipulation demonstrations, with the goal of using those demonstrations to train robotic policies.",
+    role:
+      "Mechanical design of the gripper assembly and end effector for teleoperated manipulation and tactile sensing integration.",
+    technologies: ["Robotics", "Policy Training", "Tactile Sensing", "CAD", "Teleoperation"],
+    sections: [
+      {
+        title: "End Effector Design",
+        text: "The end effector is designed around the gripper's role in teleoperated manipulation, with attention to how it contacts and holds objects. The design considers space for tactile sensing to capture contact information alongside the demonstrations used for policy training.",
+        // Replace imagePlaceholder with image: "/robotic-gripper-assembly/end-effector.jpg".
+        imagePlaceholder: "End effector design image",
+      },
+      {
+        title: "Physical Assembly",
+        text: "The physical assembly brings the CAD design into a real teleoperation setup, connecting the gripper and end effector for manipulation demonstrations and future policy training.",
+        // Replace imagePlaceholder with image: "/robotic-gripper-assembly/assembly.jpg".
+        imagePlaceholder: "Real assembly photo",
+      },
+    ],
+  },
   snowbot: {
     title: "SnowBot",
     category: "Robotics",
@@ -267,7 +295,7 @@ export default async function ProjectPage({
       </div>
     ))}
   </div>
-) : (
+) : project.heroImage ? (
   <div className="relative mt-16 aspect-[16/9] overflow-hidden rounded-2xl">
     <Image
       src={project.heroImage}
@@ -277,7 +305,11 @@ export default async function ProjectPage({
       className="object-contain"
     />
   </div>
-)}
+) : project.heroPlaceholder ? (
+  <div className="mt-16 flex aspect-[16/9] items-center justify-center rounded-2xl border border-dashed border-white/20 bg-neutral-900 p-8 text-center text-gray-500">
+    {project.heroPlaceholder}
+  </div>
+) : null}
           {/* Overview */}
           <div className="mt-16 grid gap-12 md:grid-cols-[1fr_2fr]">
             <div>
@@ -337,7 +369,7 @@ export default async function ProjectPage({
                   : [section.image]
                 : [];
 
-              const hasImages = images.length > 0;
+              const hasImages = images.length > 0 || Boolean(section.imagePlaceholder);
 
               return (
                 <div
@@ -386,6 +418,11 @@ export default async function ProjectPage({
                       }
                     >
                       <div className="flex flex-col gap-6">
+                        {section.imagePlaceholder && (
+                          <div className="flex aspect-[16/9] items-center justify-center rounded-2xl border border-dashed border-white/20 bg-neutral-900 p-8 text-center text-gray-500">
+                            {section.imagePlaceholder}
+                          </div>
+                        )}
                         {images.map((image, imageIndex) => (
                           <div
                             key={image}

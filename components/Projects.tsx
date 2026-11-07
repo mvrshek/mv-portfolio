@@ -60,6 +60,13 @@ export default function Projects() {
           slug="civic-progress-challenge"
         />
 
+        <ProjectCard
+          title="Robotic Gripper Assembly"
+          category="Robotics · Policy Training · Tactile Sensing"
+          description="A robotic gripper assembly for teleoperation and policy training, designed to support the collection of manipulation demonstrations and integrate tactile sensing for contact feedback."
+          slug="robotic-gripper-assembly"
+        />
+
       </div>
     </section>
   );
