@@ -97,7 +97,7 @@ const projects: Record<string, Project> = {
 
       {
         title: "Finite Element Analysis (FEA)",
-        text: "Here is a preliminary round of FEA testing done in ansys with a 150 N distributed load (to simulate packed snow. Based on motor torque calculations.) applied across the plowing interface. In future simulations we will test bolts, and more of the actual plow architecture, this first round was just to validate the traignular plow footprint. As shown, the max deformation is .032 in, and it occurs at the same spot as the max stress: the top vertex of the triangular plow (we are working on strengthening this part of the plow).",
+        text: "Here is a preliminary round of FEA testing done in ansys with a 150 N distributed load (to simulate packed snow. Based on motor torque calculations.) applied across the plowing interface. In future simulations we will test bolts, and more of the plow frame, this first round was just to validate the traignular plow shape. As shown, the max deformation is .032 in, and max Von-Mises stress is 2230.7 psi. We are currently working on strengthening the upper tip of the plow as a result of this simulation.",
         // Replace imagePlaceholder with image: ["/snowbot/deformation.png", "/snowbot/von-mises-stress.png"] after adding both pictures.
         image: ["/snowbot/deformation.png", "/snowbot/von-mises-stress.png"]
         
